@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AndroidScreenCaster Web</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="vendor/reader.js"></script>
+  <script defer src="viewer.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <a class="project" href="https://github.com/magicsih/AndroidScreenCasterWeb">AndroidScreenCaster <span>Web</span></a>
+      <p class="eyebrow">LIVE SCREEN VIEWER</p>
+      <h1>Your Android screen,<br>in this browser.</h1>
+      <p class="intro">Start screen sharing on your phone. The video appears here.</p>
+    </header>
+    <section class="viewer" aria-label="Screen viewer">
+      <div class="toolbar">
+        <p id="status" role="status" aria-live="polite" data-state="waiting">Waiting for your phone</p>
+        <div class="actions">
+          <button id="reconnect" type="button">Reconnect</button>
+          <button id="fullscreen" type="button" disabled>Full screen</button>
+        </div>
+      </div>
+      <div id="stage" class="stage">
+        <video id="video" autoplay muted playsinline aria-label="Live Android screen"></video>
+        <div id="placeholder" class="placeholder">
+          <span class="screen-icon" aria-hidden="true">▯</span>
+          <p id="message">Ready when you are</p>
+          <p>Open ScreenCaster and approve screen sharing.</p>
+        </div>
+      </div>
+    </section>
+    <section class="setup" aria-labelledby="setup-title">
+      <h2 id="setup-title">Connect your phone</h2>
+      <ol>
+        <li><span>01</span><p>Use the same reachable Wi-Fi or LAN as this server.</p></li>
+        <li><span>02</span><p>Enter the server computer's LAN IP in ScreenCaster. Select <strong>TCP</strong> and <strong>H264</strong>.</p></li>
+        <li><span>03</span><p>Tap <strong>Start</strong> and approve sharing. Use the phone's <strong>Stop</strong> control to finish.</p></li>
+      </ol>
+      <p class="note">Video only · One phone · Trusted networks</p>
+    </section>
+    <footer><a href="https://github.com/magicsih/AndroidScreenCaster">Android sender &amp; APK</a><a href="https://github.com/magicsih/AndroidScreenCasterWeb#troubleshooting">Help &amp; setup</a></footer>
+  </main>
+</body>
+</html>

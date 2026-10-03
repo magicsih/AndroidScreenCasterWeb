@@ -1,0 +1,251 @@
+{
+  "samples": [
+    {
+      "frames": 1,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "5596b8406d9d39d0de1396b8ae860500d445cf957b969ebb7d39f39f1c9e5be2",
+      "seconds": 0.03
+    },
+    {
+      "frames": 128,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "7df43d95fc504c419f5a03030bfda9d7db0d969c79ec4db3bf5b58ed3b5f1cc8",
+      "seconds": 5.14
+    },
+    {
+      "frames": 254,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "263cf1bb9df3ae451a165490e21168b35027f9c222c92813fb3192757acad8c5",
+      "seconds": 10.17
+    },
+    {
+      "frames": 380,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "d4e149dc3d80003d00950e257b694481d27845e62136fdda7ba3efa5cb3443f9",
+      "seconds": 15.19
+    },
+    {
+      "frames": 515,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "d5eb7095cc94f2468d472032766a4b750bdfd6e5b7d44a8b1c2e354a67e7e859",
+      "seconds": 20.6
+    },
+    {
+      "frames": 640,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "8b963edbbddf916d88824458ef2a1429ad7f6f5b463556cc54bb95e8f641b3af",
+      "seconds": 25.63
+    },
+    {
+      "frames": 766,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "b06245acb6681ac3eb187c90b6c95520d5e78d3794c34be8faa2803120f6133d",
+      "seconds": 30.66
+    },
+    {
+      "frames": 901,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "c6abcf8ad42b13bf9497742499dcefa83e4e354209e187703f6ab4d86920cd7a",
+      "seconds": 36.06
+    },
+    {
+      "frames": 1024,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "08e75d726092c93662614b10fe3e4112988b107fcff3f4e691ff3baf557a0595",
+      "seconds": 41.09,
+      "late_join_frames": 1
+    },
+    {
+      "frames": 1176,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "87251cdd06794c3082ae21f3693292c6619830b2a9dd1acba73790eea01d5fa4",
+      "seconds": 47.19
+    },
+    {
+      "frames": 1312,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "21d3d2ec1a9925a892745d4897f4cad0804a746dfb8daebd0210459bb8917c10",
+      "seconds": 52.59
+    },
+    {
+      "frames": 1437,
+      "dropped": 1,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "27824de76e43852d6dd4941683ee88085886f301501bf7cafba471e61c2b0f54",
+      "seconds": 57.62,
+      "manual_reconnect": true
+    },
+    {
+      "frames": 124,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "0e26d84cdb2d297876cef906fd396f2f942912eedf4c08de616f07fc7aff6599",
+      "seconds": 63.94
+    },
+    {
+      "frames": 259,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "babe7bf4e0ab490a77005fc6c3e3b66aed15037f0f1be9a53252de1a19e3ae71",
+      "seconds": 69.33
+    },
+    {
+      "frames": 386,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "28448bd91b132d30547ac28ab5e6b9f16ebd40179c3c3cb3d45a8c9ed02ad426",
+      "seconds": 74.42
+    },
+    {
+      "frames": 511,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "98174951c8fa95b39f30ed23d861beec50654524634b9ee90ddca178071fcdd8",
+      "seconds": 79.45
+    },
+    {
+      "frames": 646,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "a4385c43e84fdb8d786eca7bbc811f50be6caa9a9e594eec03faca90ce5c6edb",
+      "seconds": 84.84
+    },
+    {
+      "frames": 771,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "29ffcd2fa42fe1b16f09615c8d727c167e17edcdcd6354d844208b3d1a529a48",
+      "seconds": 89.87
+    },
+    {
+      "frames": 897,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "2880e09eb50d9385529209e41d7896aa2d660f905a4072cb0f4821d483f52358",
+      "seconds": 94.9
+    },
+    {
+      "frames": 1032,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "70655f9f236c1269e06ea4e5b7c3551b3c3393bf6a039348929cdf407e575d11",
+      "seconds": 100.3
+    },
+    {
+      "frames": 1156,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "39ccbdbeb02cf80d2596147452e7204483022eadde33624c83b687063027b337",
+      "seconds": 105.33
+    },
+    {
+      "frames": 1283,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "52aaeeddd3418dcf7f2f0c1c74a5037042e09131c55c874d173fedd834c33889",
+      "seconds": 110.37
+    },
+    {
+      "frames": 1417,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "24fd776476fc529e8663e51a0142769543a17dcaf23c40a500c86f6f78c1b5fd",
+      "seconds": 115.76
+    },
+    {
+      "frames": 1543,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "ac6ce9c23a4e4267308de7bcfd0b9a28f23bf3b25c137b75514ec22277e43c56",
+      "seconds": 120.79
+    },
+    {
+      "frames": 1669,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "2376f7cdf1ee07aba113d3617af05269c5cfe1db995145ce5a62b6157882f473",
+      "seconds": 125.81
+    },
+    {
+      "frames": 1804,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "16099ed2a26d1d5c6ab6beb7d39eaeb16577110282e4d8f98ef5580e94087f4b",
+      "seconds": 131.2
+    },
+    {
+      "frames": 1929,
+      "dropped": 0,
+      "width": 1280,
+      "height": 720,
+      "status": "Live \u00b7 1280 \u00d7 720",
+      "hash": "f46ae5558cddc09e7c98355ed816dbca985f057d5db7871ea7bcf99c5f3e6ca7",
+      "seconds": 136.22
+    }
+  ],
+  "different_images": 27,
+  "elapsed_seconds": 136.26
+}
