@@ -13,6 +13,8 @@ The viewer computer does not need FFplay.
 port **49152** stay unchanged. This viewer does not control the phone or capture
 audio. Up to four browser viewers can join the same stream.
 
+![Browser viewer displaying the physical Android test screen](docs/images/physical-viewer.png)
+
 ## Start the server
 
 Install Docker with the Compose plugin, then:

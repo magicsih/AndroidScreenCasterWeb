@@ -1,0 +1,71 @@
+{
+  "measurements": [
+    {
+      "sample": 3,
+      "source_elapsed_ms": 787814,
+      "browser_elapsed_ms": 787524,
+      "raw_clock_difference_ms": 290,
+      "midpoint_corrected_estimate_ms": 111.2,
+      "acquisition_uncertainty_ms": 193.0
+    },
+    {
+      "sample": 6,
+      "source_elapsed_ms": 803264,
+      "browser_elapsed_ms": 802974,
+      "raw_clock_difference_ms": 290,
+      "midpoint_corrected_estimate_ms": 117.2,
+      "acquisition_uncertainty_ms": 190.5
+    },
+    {
+      "sample": 9,
+      "source_elapsed_ms": 819792,
+      "browser_elapsed_ms": 819543,
+      "raw_clock_difference_ms": 249,
+      "midpoint_corrected_estimate_ms": 77.0,
+      "acquisition_uncertainty_ms": 188.2
+    },
+    {
+      "sample": 12,
+      "source_elapsed_ms": 836571,
+      "browser_elapsed_ms": 836280,
+      "raw_clock_difference_ms": 291,
+      "midpoint_corrected_estimate_ms": 117.9,
+      "acquisition_uncertainty_ms": 187.0
+    },
+    {
+      "sample": 15,
+      "source_elapsed_ms": 852065,
+      "browser_elapsed_ms": 851816,
+      "raw_clock_difference_ms": 249,
+      "midpoint_corrected_estimate_ms": 77.5,
+      "acquisition_uncertainty_ms": 187.6
+    },
+    {
+      "sample": 18,
+      "source_elapsed_ms": 867516,
+      "browser_elapsed_ms": 867227,
+      "raw_clock_difference_ms": 289,
+      "midpoint_corrected_estimate_ms": 116.7,
+      "acquisition_uncertainty_ms": 189.5
+    },
+    {
+      "sample": 21,
+      "source_elapsed_ms": 882969,
+      "browser_elapsed_ms": 882638,
+      "raw_clock_difference_ms": 331,
+      "midpoint_corrected_estimate_ms": 163.5,
+      "acquisition_uncertainty_ms": 183.6
+    },
+    {
+      "sample": 24,
+      "source_elapsed_ms": 898422,
+      "browser_elapsed_ms": 898091,
+      "raw_clock_difference_ms": 331,
+      "midpoint_corrected_estimate_ms": 163.0,
+      "acquisition_uncertainty_ms": 178.5
+    }
+  ],
+  "median_raw_clock_difference_ms": 290.0,
+  "median_midpoint_estimate_ms": 116.95,
+  "method": "Concurrent source screencap and decoded browser canvas; OCR of MotionActivity elapsed milliseconds, corrected by host acquisition midpoints. Acquisition uncertainty excludes 33 ms source draw cadence. Not optical glass-to-glass."
+}
