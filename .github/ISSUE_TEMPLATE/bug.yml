@@ -1,0 +1,17 @@
+name: Browser playback bug
+description: Report a reproducible receiver or viewer problem.
+body:
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Server OS/architecture, Docker/Compose, browser/version, Android/app version, codec/settings, LAN or ADB.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps and observed behavior
+      description: Include expected behavior and sanitized logs. Do not attach private captured screens.
+    validations:
+      required: true

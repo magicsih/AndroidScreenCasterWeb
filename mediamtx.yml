@@ -1,0 +1,51 @@
+logLevel: info
+readTimeout: 10s
+writeTimeout: 10s
+writeQueueSize: 256
+
+api: false
+metrics: false
+pprof: false
+playback: false
+rtmp: false
+hls: false
+srt: false
+moq: false
+
+rtsp: true
+rtspAddress: 127.0.0.1:8554
+rtspTransports: [tcp]
+
+webrtc: true
+webrtcAddress: :8889
+webrtcLocalUDPAddress: :8189
+webrtcLocalTCPAddress: :8189
+webrtcIPsFromInterfaces: false
+webrtcICEServers2: []
+
+authInternalUsers:
+  - user: any
+    ips: [127.0.0.1, "::1"]
+    permissions:
+      - action: publish
+        path: screen
+  - user: any
+    permissions:
+      - action: read
+        path: screen
+
+paths:
+  screen:
+    source: publisher
+    overridePublisher: false
+    maxReaders: 4
+    # The sender already encodes H.264. Repackage it into RTSP without decoding.
+    # Annex B has no per-frame PTS; FFmpeg generates timing at the sender's 30 fps.
+    runOnInit: >-
+      ffmpeg -nostdin -hide_banner -loglevel warning
+      -fflags +genpts+nobuffer -flags low_delay
+      -probesize 32768 -analyzeduration 0 -framerate 30 -f h264
+      -i tcp://0.0.0.0:49152?listen=1
+      -an -c:v copy -bsf:v setts=pts=N/(30*TB):dts=N/(30*TB):duration=1/(30*TB)
+      -f rtsp -rtsp_transport tcp rtsp://127.0.0.1:8554/screen
+    runOnInitRestart: true

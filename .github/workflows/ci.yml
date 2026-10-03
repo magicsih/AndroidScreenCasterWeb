@@ -1,0 +1,52 @@
+name: Browser gateway CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: gateway-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  gateway:
+    name: Gateway and browser checks
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.13'
+      - name: Install isolated browser test tools
+        run: |
+          python -m pip install -r requirements-test.txt
+          python -m playwright install --with-deps chromium
+      - name: Validate and start gateway
+        run: |
+          docker compose config --quiet
+          docker compose run --rm --no-deps media --validate-conf=/mediamtx.yml
+          docker compose -p ascweb-ci up -d
+          docker compose -p ascweb-ci exec -T web nginx -t
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8080/ > /dev/null; then exit 0; fi
+            sleep 1
+          done
+          exit 1
+      - name: Decode changing video, join late and reconnect
+        run: python tools/browser_checks.py
+      - name: Save gateway logs
+        if: always()
+        run: |
+          mkdir -p artifacts
+          docker compose -p ascweb-ci logs --no-color > artifacts/compose.log
+          docker compose -p ascweb-ci down
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: always()
+        with:
+          name: gateway-checks
+          path: artifacts/
+          retention-days: 3
