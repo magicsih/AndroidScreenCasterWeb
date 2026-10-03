@@ -9,6 +9,8 @@ The existing Java Android app sends H.264 over TCP; FFmpeg receives it and
 publishes to MediaMTX, which serves the video to a browser through WebRTC.
 The viewer computer does not need FFplay.
 
+[Explore the project website](https://magicsih.github.io/AndroidScreenCaster/) for the original demo, both projects, and a quick start.
+
 **One phone, TCP/H.264, video only, trusted Wi-Fi/LAN.** The Android app and its
 port **49152** stay unchanged. This viewer does not control the phone or capture
 audio. Up to four browser viewers can join the same stream.
