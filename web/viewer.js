@@ -18,15 +18,19 @@ function show(state, label, detail) {
   if (detail) message.textContent = detail;
 }
 
-function stop() {
-  generation++;
-  if (reader) reader.close();
-  reader = null;
+function clearVideo() {
   if (frameCallback !== null) video.cancelVideoFrameCallback(frameCallback);
   frameCallback = null;
   if (video.srcObject) video.srcObject.getTracks().forEach((track) => track.stop());
   video.srcObject = null;
   lastFrameAt = 0;
+}
+
+function stop() {
+  generation++;
+  if (reader) reader.close();
+  reader = null;
+  clearVideo();
 }
 
 function connect() {
@@ -37,36 +41,41 @@ function connect() {
     show("error", "Browser not supported", "Use a current browser with WebRTC video support");
     return;
   }
-  const frame = () => {
-    if (current !== generation) return;
-    lastFrameAt = performance.now();
-    show("live", "Live · " + video.videoWidth + " × " + video.videoHeight);
-    frameCallback = video.requestVideoFrameCallback(frame);
-  };
   reader = new MediaMTXWebRTCReader({
     url: new URL("/screen/whep", window.location.href).href,
     onError: (error) => {
       if (current !== generation) return;
       // Keep protocol errors in the console; offer an actionable state to viewers.
       console.warn(error);
-      lastFrameAt = 0;
+      clearVideo();
       show("waiting", "Waiting for your phone · reconnecting", "Stream disconnected or unavailable");
     },
     onTrack: (event) => {
       if (current !== generation || event.track.kind !== "video") return;
+      clearVideo();
       video.srcObject = event.streams[0] || new MediaStream([event.track]);
+      const stream = video.srcObject;
+      const frame = () => {
+        if (current !== generation || video.srcObject !== stream) return;
+        lastFrameAt = performance.now();
+        show("live", "Live · " + video.videoWidth + " × " + video.videoHeight);
+        frameCallback = video.requestVideoFrameCallback(frame);
+      };
+      frameCallback = video.requestVideoFrameCallback(frame);
       video.play().catch(() => {
         if (current === generation) show("error", "Playback paused", "Select Reconnect to start playback");
       });
     },
   });
-  frameCallback = video.requestVideoFrameCallback(frame);
 }
 
 // A negotiated track is not proof that decoded video has arrived.
 window.setInterval(() => {
   if (lastFrameAt && performance.now() - lastFrameAt > 5000) {
-    show("waiting", "Waiting for video", "No recent video frames");
+    // UDP peers can stay nominally connected after the sender stops. Replace the
+    // stale connection so a new sender is visible before ICE's longer timeout.
+    connect();
+    show("waiting", "Waiting for your phone · reconnecting", "No recent video frames");
   }
 }, 1000);
 
